@@ -1,99 +1,109 @@
-# Options Chain Analytics
+# Financial Data Analytics Dashboard v2.0
 
-A modern web application for downloading and analyzing options chain data for any publicly traded company. Built with Python, Dash, and yfinance.
+## Overview
+A powerful web-based dashboard for downloading and analyzing financial market data, including stocks, options chains, and futures contracts. Built with Python and Dash, this application provides an intuitive interface for accessing market data through Yahoo Finance.
 
-![Options Chain Analytics Interface](assets/preview.png)
+## New Features in v2.0
+- **Multi-Page Layout**: Organized interface with dedicated pages for stocks, options, and futures data
+- **Enhanced UI/UX**: 
+  - Modern, responsive design with a consistent color scheme
+  - Intuitive navigation bar
+  - Professional hero sections for each page
+  - Interactive form controls with validation
+- **Comprehensive Futures Reference**: 
+  - Collapsible sections for different futures categories
+  - Easy-to-reference symbols for various market segments
+  - Categories include:
+    - Energy Futures
+    - Metal Futures
+    - Agricultural Futures
+    - Index Futures
+    - Currency Futures
+    - Interest Rate Futures
 
-## 🚀 Features
+## Features
 
-- **Real-time Options Data**: Fetch current options chain data for any publicly traded stock
-- **Flexible Download Options**: Choose between Calls, Puts, or both
-- **Custom Timeframes**: Adjust lookback period for historical analysis
-- **Modern UI**: Clean, professional interface with intuitive controls
-- **Instant CSV Export**: Download data in CSV format for further analysis
+### Stock Price Analytics
+- Download historical stock price data
+- Flexible time period selection (1 month to 5 years)
+- Complete OHLCV (Open, High, Low, Close, Volume) data
+- CSV format export
 
-## 📋 Prerequisites
+### Options Chain Analytics
+- Download options chain data for any publicly traded company
+- Filter by calls, puts, or both
+- Customizable lookback period
+- Comprehensive options data including strikes, expiration dates, and Greeks
 
-Before running the application, ensure you have Python 3.8+ installed. The application requires the following packages:
+### Futures Market Analytics
+- Download futures contract data
+- Extensive symbol reference guide
+- Support for major futures markets:
+  - Energy (CL=F, BZ=F, NG=F, etc.)
+  - Metals (GC=F, SI=F, HG=F, etc.)
+  - Agriculture (ZC=F, ZW=F, ZS=F, etc.)
+  - Indices (ES=F, NQ=F, YM=F, etc.)
+  - Currencies (6E=F, 6J=F, 6B=F, etc.)
+  - Interest Rates (ZN=F, ZF=F, ZT=F, etc.)
 
-```bash
-numpy
-pandas
-dash
-yfinance
-```
-
-## 🛠️ Installation
+## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/Option-Chain-Download-Project.git
-cd Option-Chain-Download-Project
+git clone https://github.com/yourusername/financial-data-dashboard.git
+cd financial-data-dashboard
 ```
 
-2. Create and activate a virtual environment (recommended):
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-```
-
-3. Install required packages:
+2. Install required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
-## 🚀 Usage
-
-1. Start the application:
+3. Run the application:
 ```bash
-python app.py
+python Baccarat.py
 ```
 
-2. Open your web browser and navigate to:
-```
-http://localhost:8050
-```
+## Dependencies
+- dash==2.14.0
+- pandas==2.1.0
+- yfinance==0.2.28
+- numpy==1.24.3
+- plotly==5.17.0
 
-3. Enter a stock ticker (e.g., AAPL, MSFT)
-4. Select option type (Calls, Puts, or Both)
-5. Set your desired lookback period
-6. Click "Download Options Data"
+## Usage
 
-## 📊 Data Format
+1. Navigate to `http://localhost:8050` in your web browser
+2. Select the desired data type (Stocks, Options, or Futures)
+3. Enter the required symbol and parameters
+4. Click the download button to receive your data in CSV format
 
-The downloaded CSV file includes the following data for each option:
+## Error Handling
+- Input validation for all fields
+- Clear error messages for invalid symbols
+- Graceful handling of API failures
+- User-friendly feedback messages
 
-- Contract Symbol
-- Strike Price
-- Last Price
-- Bid/Ask
-- Volume
-- Open Interest
-- Implied Volatility
-- And more...
-
-## 🛡️ License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🤝 Contributing
-
+## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📬 Contact
+## Acknowledgments
+- Data provided by Yahoo Finance
+- Built with Plotly Dash
+- Icons from Font Awesome
 
-Your Name - [Your Email]
+## Future Enhancements
+- Real-time data streaming
+- Interactive charts and visualizations
+- Additional data sources
+- Portfolio tracking functionality
+- Advanced analytics tools
 
-Project Link: [https://github.com/yourusername/Option-Chain-Download-Project](https://github.com/yourusername/Option-Chain-Download-Project)
+## Contact
+For questions and support, please open an issue in the GitHub repository.
 
-##  Acknowledgments
-
-- [yfinance](https://github.com/ranaroussi/yfinance) for providing the options data API
-- [Dash](https://dash.plotly.com/) for the web framework
-- [Font Awesome](https://fontawesome.com/) for the icons
+---
+*Note: This project is for educational and research purposes only. Please ensure compliance with all relevant financial data usage terms and conditions.* 
